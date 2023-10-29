@@ -15,7 +15,7 @@ FROM language;
 SELECT first_name
 FROM staff;
 # 4 Retrieve unique release years
-SELECT DISTINCT EXTRACT(YEAR FROM release_year) AS unique_release_years
+SELECT DISTINCT release_year AS unique_release_years
 FROM film;
 # 5 Counting records for database insights:
 # 5.1 Determine the number of stores that the company has
@@ -26,7 +26,7 @@ SELECT COUNT(*) AS number_of_employees
 FROM staff;
 # 5.3 Determine how many films are available for rent and how many have been rented
 SELECT COUNT(*) AS films_available_for_rent
-FROM inventory;
+FROM film;
 SELECT COUNT(*) AS films_rented
 FROM rental;
 # 5.4 Determine the number of distinct last names of the actors in the database.
